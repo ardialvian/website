@@ -1,0 +1,307 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: transparent;
+    color: #ffffff;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   GLOBAL BACKGROUND
+========================= */
+.global-bg {
+    position: fixed;
+    inset: 0;
+    background: url('../img/hero.jpg') center / cover no-repeat;
+    z-index: -10;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 170, 200, 0.92),
+        rgba(40, 70, 200, 0.92)
+    );
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.page-wrapper {
+    min-height: 100vh;
+    padding: 160px 16px 80px;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   PAGE ANIMATION
+========================= */
+.animate-slide {
+    animation: slideFade 0.7s ease forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff;
+}
+
+.brand-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo {
+    height: 1em;
+    width: auto;
+}
+
+/* =========================
+   SECTION TEXT
+========================= */
+.section-desc {
+    max-width: 720px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-list {
+    max-width: 640px;
+    margin-top: 40px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-top: 4px;
+}
+
+.contact-item span {
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0.75;
+    text-transform: uppercase;
+}
+
+.contact-item p {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   LICENSE / CERTIFICATE
+========================= */
+.license-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.license-card img {
+    max-height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.license-card h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.license-card span {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.license-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   MODAL LICENSE
+========================= */
+.modal-content.modal-license {
+    background: linear-gradient(135deg, #1aa3c6, #3b4cc0);
+    border-radius: 16px;
+    border: none;
+}
+
+.modal-license img {
+    max-height: 80vh;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* =========================
+   SERVICE CARD
+========================= */
+.service-card {
+    display: block;
+    height: 100%;
+    padding: 26px 22px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.75;
+    padding: 30px 0;
+}
+
+/* =========================
+   CATERING & KLIEN
+========================= */
+.section-hero,
+.section-klien {
+    display: flex;
+    align-items: center;
+}
+
+.section-klien {
+    min-height: 30vh;
+}
+
+.klien-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.klien-img {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding-top: 130px;
+    }
+
+    .navbar-brand {
+        font-size: 15px;
+    }
+
+    .section-desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-wrapper {
+        padding-top: 110px;
+    }
+
+    .service-card:hover,
+    .license-card:hover {
+        transform: none;
+    }
+}

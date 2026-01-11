@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="section-title">Hubungi Kami</h2>
+
+    <div class="contact-list">
+
+        <div class="contact-item">
+            <img src="{{ url_for('static', filename='img/icons/icon-email.png') }}" alt="Email">
+            <div>
+                <span>Email</span>
+                <p>admin@recindonesia.my.id</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <img src="{{ url_for('static', filename='img/icons/icon-phone.png') }}" alt="Phone">
+            <div>
+                <span>Telepon</span>
+                <p>0812-1815-7817</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <img src="{{ url_for('static', filename='img/icons/icon-location.png') }}" alt="Location">
+            <div>
+                <span>Alamat</span>
+                <p>
+                    Perumahan Savasa, Jl. Niwa 6 No.18<br>
+                    Deltamas, Cikarang Pusat<br>
+                    Bekasi, Jawa Barat, Indonesia
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

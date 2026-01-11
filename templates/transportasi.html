@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section-hero">
+    <div class="container text-center">
+        <h1 class="hero-title">REC INDONESIA GROUP</h1>
+
+        <h4 class="hero-subtitle">
+            SOLUSI TERINTEGRASI, KEUNGGULAN TERPERCAYA
+        </h4>
+
+        <p class="hero-text">
+            Menyediakan layanan transportasi, keamanan, katering,
+            dan pengadaan terintegrasi untuk mendukung keunggulan operasional
+            dan pertumbuhan bisnis berkelanjutan di seluruh Indonesia.
+        </p>
+
+        <a">LAYANAN KAMI</a>
+
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="/transportasi" class="service-card">
+                    <h5>Transportasi</h5>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="/keamanan" class="service-card">
+                    <h5>Security</h5>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="/catering" class="service-card">
+                    <h5>Katering</h5>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="/pengadaan" class="service-card">
+                    <h5>Supplier Pengadaan Barang</h5>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="klien" class="section-klien">
+    <div class="container text-center">
+        <h4 class="hero-subtitle">
+            Klien Kami
+        </h4>
+        <p class="hero-text">
+            Pelanggan setia kami termasuk pribadi, perusahaan multinasional, hingga perusahaan internasional
+        </p>
+    </div>
+</section>
+<section class="klien-wrapper animate-slide">
+    <img src="{{ url_for('static', filename='img/klien/cust-logo.png') }}" class="klien-img" alt="klien 1">
+    
+</section>
+
+{% endblock %}

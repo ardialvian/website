@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="section-title">Lisensi & Sertifikat</h2>
+
+    <p class="section-desc">
+        PT REC Indonesia Group berkomitmen pada kepatuhan, profesionalisme, dan keunggulan layanan.
+        Berikut adalah lisensi dan sertifikasi resmi kami yang mendukung kredibilitas operasional kami.
+    </p>
+
+    <div class="row mt-4">
+
+        <!-- License Item -->
+        <div class="col-md-4">
+            <div class="license-card">
+                <img
+                    src="{{ url_for('static', filename='img/licenses/NIB-license.png') }}"
+                    class="zoomable"
+                    data-img="{{ url_for('static', filename='img/licenses/NIB-license.png') }}"
+                    data-title="Nomor Induk Berusaha"
+                    alt="Nomor Induk Berusaha"
+                >
+                <h6>Nomor Induk Berusaha</h6>
+                <span>Dikeluarkan Oleh Pemerintah</span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="license-card">
+                <img
+                    src="{{ url_for('static', filename='img/licenses/SK-license.png') }}"
+                    class="zoomable"
+                    data-img="{{ url_for('static', filename='img/licenses/SK-license.png') }}"
+                    data-title="Sertifikat Pengesahan Badan Hukum"
+                    alt="Sertifikat Pengesahan Badan Hukum"
+                >
+                <h6>Sertifikat Pengesahan Badan Hukum</h6>
+                <span>Sah & Terdaftar</span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="license-card">
+                <img
+                    src="{{ url_for('static', filename='img/licenses/sert-cat.png') }}"
+                    class="zoomable"
+                    data-img="{{ url_for('static', filename='img/licenses/sert-cat.png') }}"
+                    data-title="Sertifikat Lainnya"
+                    alt="Sertifikat Lainnya"
+                >
+                <h6>Sertifikat Lainnya</h6>
+                <span></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content modal-license">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body text-center">
+                <img id="imageModalSrc" alt="License Preview">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const modalEl   = document.getElementById('imageModal');
+    const modalImg  = document.getElementById('imageModalSrc');
+    const modalText = document.getElementById('imageModalTitle');
+
+    const modal = new bootstrap.Modal(modalEl, {
+        backdrop: true,
+        keyboard: true
+    });
+
+    // buka modal
+    document.querySelectorAll('.zoomable').forEach(img => {
+        img.addEventListener('click', function () {
+            modalImg.src = this.dataset.img;
+            modalText.textContent = this.dataset.title || '';
+            modalImg.classList.remove('zoomed');
+            modal.show();
+        });
+    });
+
+    // zoom toggle
+    modalImg.addEventListener('click', function () {
+        this.classList.toggle('zoomed');
+    });
+
+    // reset saat modal ditutup
+    modalEl.addEventListener('hidden.bs.modal', function () {
+        modalImg.src = '';
+        modalImg.classList.remove('zoomed');
+    });
+
+});
+</script>
+
+{% endblock %}
