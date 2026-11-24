@@ -1,64 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="section-hero">
-    <div class="container text-center">
-        <h1 class="hero-title">REC INDONESIA GROUP</h1>
 
-        <h4 class="hero-subtitle">
-            SOLUSI TERINTEGRASI, KEUNGGULAN TERPERCAYA
-        </h4>
+<section class="catering-wrapper animate-slide">
 
-        <p class="hero-text">
-            Menyediakan layanan transportasi, keamanan, katering,
-            dan pengadaan terintegrasi untuk mendukung keunggulan operasional
-            dan pertumbuhan bisnis berkelanjutan di seluruh Indonesia.
-        </p>
+    <img src="{{ url_for('static', filename='img/CATERING/cat1.png') }}" class="catering-img" alt="Catering 1">
+    <img src="{{ url_for('static', filename='img/CATERING/cat2.png') }}" class="catering-img" alt="Catering 2">
+    <img src="{{ url_for('static', filename='img/CATERING/cat3.png') }}" class="catering-img" alt="Catering 3">
+    <img src="{{ url_for('static', filename='img/CATERING/cat4.png') }}" class="catering-img" alt="Catering 4">
+    <img src="{{ url_for('static', filename='img/CATERING/cat5.png') }}" class="catering-img" alt="Catering 5">
+    <img src="{{ url_for('static', filename='img/CATERING/cat6.png') }}" class="catering-img" alt="Catering 6">
+    <img src="{{ url_for('static', filename='img/CATERING/cat7.png') }}" class="catering-img" alt="Catering 7">
+    <img src="{{ url_for('static', filename='img/CATERING/cat8.png') }}" class="catering-img" alt="Catering 8">
+    <img src="{{ url_for('static', filename='img/CATERING/cat9.png') }}" class="catering-img" alt="Catering 9">
+    <img src="{{ url_for('static', filename='img/CATERING/cat10.png') }}" class="catering-img" alt="Catering 10">
+    <img src="{{ url_for('static', filename='img/CATERING/cat11.png') }}" class="catering-img" alt="Catering 11">
+    <img src="{{ url_for('static', filename='img/CATERING/cat12.png') }}" class="catering-img" alt="Catering 12">
+    <img src="{{ url_for('static', filename='img/CATERING/cat13.png') }}" class="catering-img" alt="Catering 13">
+    <img src="{{ url_for('static', filename='img/CATERING/cat14.png') }}" class="catering-img" alt="Catering 14">
 
-        <a">LAYANAN KAMI</a>
-
-        <div class="row justify-content-center mt-5">
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="/transportasi" class="service-card">
-                    <h5>Transportasi</h5>
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="/keamanan" class="service-card">
-                    <h5>Security</h5>
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="/catering" class="service-card">
-                    <h5>Katering</h5>
-                </a>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="/pengadaan" class="service-card">
-                    <h5>Supplier Pengadaan Barang</h5>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-<section id="klien" class="section-klien">
-    <div class="container text-center">
-        <h4 class="hero-subtitle">
-            Klien Kami
-        </h4>
-        <p class="hero-text">
-            Pelanggan setia kami termasuk pribadi, perusahaan multinasional, hingga perusahaan internasional
-        </p>
-    </div>
-</section>
-<section class="klien-wrapper animate-slide">
-    <img src="{{ url_for('static', filename='img/klien/cust-logo.png') }}" class="klien-img" alt="klien 1">
-    
 </section>
 
 {% endblock %}
