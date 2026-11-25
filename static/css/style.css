@@ -384,7 +384,7 @@ a {
     }
 
     to {
-        transform: translateX(calc(-50% - 50vw));
+        transform: translateX(calc(-100% - 50vw));
     }
 }
 
