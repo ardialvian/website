@@ -384,7 +384,7 @@ a {
     }
 
     to {
-        transform: translateX(calc(-100% - 50vw));
+        transform: translateX(calc(-50% - 50vw));
     }
 }
 
@@ -401,7 +401,7 @@ a {
 
     .brand-track {
         gap: 10px;
-        animation-duration: 1s;
+        animation-duration: 5s;
     }
 
     .brand-logo {
